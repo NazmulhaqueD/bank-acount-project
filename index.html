@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-slate-800">
+    <section id="home-page" class="bg-gray-200 max-w-md min-h-screen mx-auto py-5">
+        <header>
+            <nav>
+                <div class="flex justify-center flex-col w-9/12 mx-auto relative mt-12">
+                    <img src="./assets/bg.png" alt="">
+                    <img class="text-center w-24 absolute left-32 top-16" src="./assets/Group.png" alt="">
+                </div>
+            </nav>
+        </header>
+        <main>
+            <form class="bg-white w-10/12 mx-auto p-8 rounded-xl">
+                <label class="text-xl font-bold" for="mobile-number">Mobile Number</label><br>
+                <input class="w-full bg-gray-200 py-2 px-4 text-xl rounded-full my-4" type="number" placeholder="Enter your number"><br>
+
+                <label class="text-xl font-bold" for="pin-number">4 Digit Pin</label><br>
+                <input class="w-full bg-gray-200 py-2 px-4 text-xl rounded-full my-4" type="text" placeholder="Enter 4 Digit Pin">
+                <button class="btn w-full rounded-full bg-blue-500 text-white text-xl">Login</button>
+            </form>
+        </main>
+    </section>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

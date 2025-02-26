@@ -16,11 +16,11 @@
             <div class="flex gap-6 items-center">
                 <img class="logo w-16" src="./assets/Group.png" alt="">
                 <div>
-                    <p class="text-2xl font-bold">$ <span>4500</span></p>
+                    <p class="text-2xl font-bold">$ <span id="initial-amount">4500</span></p>
                     <p>available Balance</p>
                 </div>
             </div>
-            <button class="btn">Log-out</button>
+            <button id="log-out" class="btn">Log-out</button>
         </nav>
         <hr class="border-black my-6">
 
@@ -71,14 +71,14 @@
             </select>
 
             <label for="account-number">Bank Account Number</label><br>
-            <input class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number" placeholder="Enter 11 digit Account Number">
+            <input id="account-number" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number" placeholder="Enter 11 digit Account Number">
 
             <label for="amount">Amount to Add</label><br>
-            <input class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number" placeholder="Amount to Withdraw">
+            <input id="amount" class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number" placeholder="Amount to Withdraw">
 
-            <input class="w-full bg-gray-100 px-5 py-2 rounded-full" type="text" placeholder="4 Digit Pin">
+            <input id="password" class="w-full bg-gray-100 px-5 py-2 rounded-full" type="number" placeholder="4 Digit Pin" value="1234">
 
-            <button class="btn w-full bg-blue-500 rounded-full mt-3">Add money</button>
+            <button id="add-money" class="btn w-full bg-blue-500 rounded-full mt-3">Add money</button>
 
         </form>
     </section>

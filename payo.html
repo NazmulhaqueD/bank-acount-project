@@ -29,13 +29,14 @@
             <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
 
             <div class="card-container mt-8 grid grid-cols-3 gap-4">
-                <div class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
+                <div id="add-money-box"
+                    class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
                     <img class="mx-auto" src="./assets/wallet1.png" alt="">
-                    <p class="">Add money</p>
+                    <p class="">Add Money</p>
                 </div>
-                <div class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
+                <div id="cashout-box" class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
                     <img class="mx-auto" src="./assets/wallet1.png" alt="">
-                    <p class="">Add money</p>
+                    <p class="">Cash Out</p>
                 </div>
                 <div class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
                     <img class="mx-auto" src="./assets/wallet1.png" alt="">
@@ -58,33 +59,61 @@
         <hr class="border-black my-6">
 
 
-        <h1 class="text-4xl text-blue-500">Add Money</h1>
-        <form class="mt-1 bg-white p-4" action="">
-            <label for="select">Select A Bank
-            </label><br>
-            <select class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" name="" id="">select
-                <option value="Bkash">Bkash</option>
-                <option value="Bkash">Roket</option>
-                <option value="Bkash">Nagad</option>
-                <option value="Bkash">Upay</option>
-                <option value="Bkash">Dasbangla</option>
-            </select>
+        <section id="add-money-section">
+            <h1 class="text-4xl text-blue-500">Add Money</h1>
+            <form class="mt-1 bg-white p-4 rounded-lg" action="">
+                <label for="select">Select A Bank
+                </label><br>
+                <select class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" name="" id="">select
+                    <option value="Bkash">Bkash</option>
+                    <option value="Bkash">Roket</option>
+                    <option value="Bkash">Nagad</option>
+                    <option value="Bkash">Upay</option>
+                    <option value="Bkash">Dasbangla</option>
+                </select>
 
-            <label for="account-number">Bank Account Number</label><br>
-            <input id="account-number" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number" placeholder="Enter 11 digit Account Number">
+                <label for="account-number">Bank Account Number</label><br>
+                <input id="account-number" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number"
+                    placeholder="Enter 11 digit Account Number" value="01313625224">
 
-            <label for="amount">Amount to Add</label><br>
-            <input id="amount" class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number" placeholder="Amount to Withdraw">
+                <label for="amount">Amount to Add</label><br>
+                <input id="amount" class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number"
+                    placeholder="Amount to Withdraw">
 
-            <input id="password" class="w-full bg-gray-100 px-5 py-2 rounded-full" type="number" placeholder="4 Digit Pin" value="1234">
+                <input id="password" class="w-full bg-gray-100 px-5 py-2 rounded-full" type="number"
+                    placeholder="4 Digit Pin" value="1234">
 
-            <button id="add-money" class="btn w-full bg-blue-500 rounded-full mt-3">Add money</button>
+                <button id="add-money" class="btn w-full bg-blue-500 rounded-full mt-3 text-white text-xl">Add money</button>
 
-        </form>
+            </form>
+        </section>
+
+
+        <section id="cashout-section" class="mt-6">
+            <h1 class="text-4xl text-blue-500">Cashout</h1>
+            <form class="mt-1 bg-white p-4 rounded-lg" action="">
+
+                <label for="account-number">Account Number</label><br>
+                <input id="account-number" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number"
+                    placeholder="Enter 11 digit Account Number" value="01313625224">
+
+                <label for="amount">Amount</label><br>
+                <input id="cashout-amount" class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number"
+                    placeholder="Amount to Withdraw" required>
+
+                <input id="cashout-password" class="w-full bg-gray-100 px-5 py-2 rounded-full" type="number"
+                    placeholder="4 Digit Pin" value="1234">
+
+                <button id="cashout-btn" class="btn w-full bg-blue-500 rounded-full mt-3 text-white text-xl">Cash Out</button>
+
+            </form>
+        </section>
     </section>
+
+
+    <script src="script/add-money.js"></script>
+    <script src="./script/togol.js"></script>
+    <script src="./script/cashOut.js"></script>
 </body>
 
-
-
-<script src="script/add-money.js"></script>
 </html>

@@ -6,17 +6,22 @@ document.getElementById('add-money')
         const initialAmount = document.getElementById('initial-amount').innerText
         const convertInitialAmount = parseFloat(initialAmount);
         const account = document.getElementById('account-number').value;
-        
+
 
         if (password === 1234 && account.length === 11) {
-            const sum = amount + convertInitialAmount;
+            if(amount > 0){
+                const sum = amount + convertInitialAmount;
             document.getElementById('initial-amount').innerText = sum;
+            }
+            else{
+                alert('please add your amount')
+            }
         }
         else {
             alert('Please Enter Your Valid Password')
         }
     })
 
-document.getElementById('log-out').addEventListener('click', function () {
+document.getElementById('log-out').addEventListener('click', function(){
     window.location.href = 'index.html'
 })

@@ -1,6 +1,6 @@
 document.getElementById("cash-out-btn").addEventListener('click', function (event) {
     event.preventDefault()
-    const selectedBank = document.getElementById('select-bank')
+    const selectedBank = document.getElementById('select-bank').value;
     const cashOutAccount = document.getElementById('cash-out-account').value;
     const cashOutAmount = getInputValueById('cash-out-amount');
     const cashOutPin = getInputValueById('cash-out-password');

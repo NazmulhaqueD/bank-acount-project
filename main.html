@@ -8,6 +8,19 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        #tran-section > div{
+            border: 3px solid black;
+            padding: 10px;
+            text-align: center;
+            border-top: 20px solid black;
+            border-right: 50px solid gray;
+            border-left: 50px solid gray;
+            border-bottom: 20px solid rgb(28, 27, 27);
+            border-radius: 5px;
+            margin: 30px auto;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-800">
@@ -16,11 +29,11 @@
             <div class="flex gap-6 items-center">
                 <img class="logo w-16" src="./assets/Group.png" alt="">
                 <div>
-                    <p class="text-2xl font-bold">$ <span id="initial-amount">4500</span></p>
+                    <p class="text-2xl font-bold">$ <span id="main-balance">4500</span></p>
                     <p>available Balance</p>
                 </div>
             </div>
-            <button id="log-out" class="btn">Log-out</button>
+            <button id="log-out-btn" class="btn">Log-out</button>
         </nav>
         <hr class="border-black my-6">
 
@@ -34,37 +47,37 @@
                     <img class="mx-auto" src="./assets/wallet1.png" alt="">
                     <p class="">Add Money</p>
                 </div>
-                <div id="cashout-box" class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
+                <div id="cash-out-box" class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
                     <img class="mx-auto" src="./assets/wallet1.png" alt="">
                     <p class="">Cash Out</p>
                 </div>
                 <div class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
-                    <img class="mx-auto" src="./assets/wallet1.png" alt="">
-                    <p class="">Add money</p>
+                    <img class="mx-auto" src="./assets/send1.png" alt="">
+                    <p class="">Pay Bill</p>
                 </div>
                 <div class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
-                    <img class="mx-auto" src="./assets/wallet1.png" alt="">
-                    <p class="">Add money</p>
+                    <img class="mx-auto" src="./assets/bonus1.png" alt="">
+                    <p class="">Transfer Money</p>
                 </div>
                 <div class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
-                    <img class="mx-auto" src="./assets/wallet1.png" alt="">
-                    <p class="">Add money</p>
+                    <img class="mx-auto" src="./assets/purse1.png" alt="">
+                    <p class="">Get Bonus</p>
                 </div>
-                <div class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
-                    <img class="mx-auto" src="./assets/wallet1.png" alt="">
-                    <p class="">Add money</p>
+                <div id="tran-section-box" class="text-center border-2 border-gray-950 px-6 py-4 rounded-xl cursor-pointer">
+                    <img class="mx-auto" src="./assets/transaction1.png" alt="">
+                    <p class="">Transaction section</p>
                 </div>
             </div>
         </main>
         <hr class="border-black my-6">
 
 
-        <section id="add-money-section">
+        <section id="add-money-section" class="">
             <h1 class="text-4xl text-blue-500">Add Money</h1>
             <form class="mt-1 bg-white p-4 rounded-lg" action="">
                 <label for="select">Select A Bank
                 </label><br>
-                <select class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" name="" id="">select
+                <select id="select-bank" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" name="">select
                     <option value="Bkash">Bkash</option>
                     <option value="Bkash">Roket</option>
                     <option value="Bkash">Nagad</option>
@@ -73,47 +86,54 @@
                 </select>
 
                 <label for="account-number">Bank Account Number</label><br>
-                <input id="account-number" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number"
+                <input id="add-account" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number"
                     placeholder="Enter 11 digit Account Number" value="01313625224">
 
                 <label for="amount">Amount to Add</label><br>
-                <input id="amount" class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number"
+                <input id="add-amount" class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number"
                     placeholder="Amount to Withdraw">
 
-                <input id="password" class="w-full bg-gray-100 px-5 py-2 rounded-full" type="number"
+                <input id="add-password" class="w-full bg-gray-100 px-5 py-2 rounded-full" type="number"
                     placeholder="4 Digit Pin" value="1234">
 
-                <button id="add-money" class="btn w-full bg-blue-500 rounded-full mt-3 text-white text-xl">Add money</button>
+                <button id="add-money-btn" class="btn w-full bg-blue-500 rounded-full mt-3 text-white text-xl">Add
+                    money</button>
 
             </form>
         </section>
 
 
-        <section id="cashout-section" class="mt-6">
+        <section id="cash-out-section" class="mt-6 hidden">
             <h1 class="text-4xl text-blue-500">Cashout</h1>
             <form class="mt-1 bg-white p-4 rounded-lg" action="">
 
                 <label for="account-number">Account Number</label><br>
-                <input id="account-number" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number"
+                <input id="cash-out-account" class="bg-gray-100 w-full px-5 py-2 rounded-full my-3" type="number"
                     placeholder="Enter 11 digit Account Number" value="01313625224">
 
                 <label for="amount">Amount</label><br>
-                <input id="cashout-amount" class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number"
+                <input id="cash-out-amount" class="w-full bg-gray-100 px-5 py-2 rounded-full my-3" type="number"
                     placeholder="Amount to Withdraw" required>
 
-                <input id="cashout-password" class="w-full bg-gray-100 px-5 py-2 rounded-full" type="number"
+                <input id="cash-out-password" class="w-full bg-gray-100 px-5 py-2 rounded-full" type="number"
                     placeholder="4 Digit Pin" value="1234">
 
-                <button id="cashout-btn" class="btn w-full bg-blue-500 rounded-full mt-3 text-white text-xl">Cash Out</button>
+                <button id="cash-out-btn" class="btn w-full bg-blue-500 rounded-full mt-3 text-white text-xl">Cash
+                    Out</button>
 
             </form>
         </section>
+
+        <section id="tran-section" class="hidden">
+            <h1 class="text-red-400 text-2xl font-bold text-center">Recently Add or Cash Out</h1>
+        </section>
     </section>
 
-
-    <!-- <script src="script/add-money.js"></script>
-    <script src="./script/togol.js"></script>
-    <script src="./script/cashOut.js"></script> -->
+    <script src="./jsFunction/addMoney.js"></script>
+    <script src="./jsFunction/reUseFunction.js"></script>
+    <script src="./jsFunction/cashOut.js"></script>
+    <script src="./jsFunction/toggle.js"></script>
+    <script src="./jsFunction/transaction.js"></script>
 </body>
 
 </html>

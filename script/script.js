@@ -6,7 +6,7 @@ document.getElementById('login-btn').addEventListener('click', function(event){
     const convertPin = parseInt(pin);
     
     if(convertPin === 1234 && mobileNumber.length === 11){
-        window.location.href= 'payo.html';
+        window.location.href= 'main.html';
     }
     else{
         alert('Wrong phone number or pin')
